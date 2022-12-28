@@ -8,6 +8,21 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Analytics } from '@vercel/analytics/react';
+import styles from "./styles/app.css"
+import {LinksFunction} from "@remix-run/node";
+
+/*export function links() {
+  return [{ rel: "stylesheet", href: styles }]
+}*/
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+};
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
